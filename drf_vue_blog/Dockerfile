@@ -9,7 +9,8 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main con
     > /etc/apt/sources.list
 # 添加这两行
 RUN apt-get update
-RUN apt-get install python3-dev default-libmysqlclient-dev -y
+RUN apt-get install aptitude -y
+RUN aptitude install python3-dev default-libmysqlclient-dev -y
 
 RUN mkdir /code
 WORKDIR /code
